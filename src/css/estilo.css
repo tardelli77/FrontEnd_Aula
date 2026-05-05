@@ -1,0 +1,126 @@
+:root{
+    --color1: #f0f0f0;
+    --color2:#333;
+    --color3:#555;
+    --color4:#3ae4b1;
+    --colorLinear: linear-gradient(purple,aqua);
+    --fontFamily:"Cascadia Code", sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--color1);
+    font-family:var(--fontFamily);
+
+}
+/***************************************************************************************************************************
+Estilizando o Hero
+****************************************************************************************************************************/
+#inicio{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    background:var(--color2);
+    justify-content:center;
+    align-items:center;
+    opacity:1;
+    transtion:opacity 1s ease-in-out;
+}
+#imgHero{
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    margin-top:20px;
+    animation: rodar 1s ease-in-out;
+}
+@keyframes rodar{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+#titulo{
+    margin-top:100px;
+    text-align:center;
+    font-size:3rem;
+    background:var(--colorLinear);
+    text-transform:uppercase;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    animation: efeito 1s ease-in-out;
+}
+
+@keyframes efeito {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+        transform: translateY(10px);
+    }
+}
+
+
+header{
+    background:var(--color3);
+    color:var(--color4);
+    padding:20px;
+    align-items:center; 
+    display:flex; 
+    justify-content:space-around;  /*ajusta o conteudo*/
+    border-radius:50px; /*arredonda a borda em 50px*/
+
+}
+header #logo{
+    width:70px;
+    height:70px; 
+    border-radius:50%; 
+}
+
+header nav ul{
+    display:flex;
+    gap:20px; /*espaço entre elementos */
+    list-style:none; /*remove as listas(bolinhas)*/
+}
+
+header nav ul li a{
+    text-decoration:none; /*remove a linha */
+    color:var(--color1);
+    font-height:800;
+    
+}
+
+header nav ul li a:houver{
+    color:var(--color4);  
+    text-decoration:underline; /*adiciona uma linha abixo do texto*/
+    text-transform:uppercase; /*deixa o texto maiusculo*/
+} 
+
+.cor{
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    background:var(--colorLinear);
+}
+
+#texto{
+    margin-top:100px;
+    text-align:center;
+    font-size:4rem;
+    background:var(--colorLinear);
+    text-transform:uppercase;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
